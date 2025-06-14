@@ -25,15 +25,15 @@ public class BookManager {
     public void updateBook(){
         System.out.println("Entre id the book that you update");
         int id = input.nextInt();
-
-        System.out.println("Enter title : ");
-        String title = input.nextLine();
-
-        System.out.println("Enter author : ");
-        String author = input.nextLine();
+        input.nextLine(); 
         boolean  found = false ;
         for(int i=0;i<books.size();i++){
             if(books.get(i).getId() == id){
+                System.out.println("Enter title : ");
+                String title = input.nextLine();
+
+                System.out.println("Enter author : ");
+                String author = input.nextLine();
                 books.set(i,new Book(id,title,author));
                 System.out.println("book is update succesful");
                 found = true;
